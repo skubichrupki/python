@@ -1,6 +1,11 @@
 import discord
 from discord import Intents
 import responses
+import os 
+from dotenv import load_dotenv, find_dotenv
+
+dotenv_path = find_dotenv()
+load_dotenv(dotenv_path)
 
 async def send_message(message, user_message):
     try:
@@ -12,7 +17,8 @@ async def send_message(message, user_message):
         print(e)
 
 def run_discord_bot():
-    TOKEN = 'MTE3NjI2OTE4MDQ1OTI5ODk2Nw.GoHcZF.XDNWr7Cm-NRX6pFrX3dVBV7PJR4PPWagaB1rwg'
+
+    TOKEN = os.getenv("TOKEN")
 
     # Create Intents
     intents = Intents.default()

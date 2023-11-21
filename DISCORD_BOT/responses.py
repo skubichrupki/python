@@ -5,7 +5,7 @@ import random
 # function for responses
 # user message as parametr
 def handle_response(message) -> str:
-    l_message = message.content.lower()
+    l_message = message.lower()
     print(f'Lowercased Message: {l_message}')  # Add this line for debugging
 
     if 'patus' in l_message:
