@@ -53,7 +53,5 @@ def handle_response(user_message) -> str:
 
         return f'{text1}\n\n{text2}\n\n{text3}'
     
-    elif lower_user_message == '!help':
-        return '`modify this`'
     else:
         return
