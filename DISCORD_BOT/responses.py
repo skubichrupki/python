@@ -51,7 +51,7 @@ def handle_response(user_message) -> str:
         text2 = f'nie wylosowali jeszcze {", ".join(names_buy)}'
         text3 = f'DO WYJEBANIA -> nie zostali wylosowani jeszcze {", ".join(names_get)}'
 
-        return f'{text1}\n\n{text2}\n\n{text3}'
+        return f'{text1}\n\n{text2}\n\n{text3} :)'
     
     else:
         return
