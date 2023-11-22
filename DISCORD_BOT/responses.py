@@ -8,7 +8,6 @@ names_get = []
 def handle_response(user_message) -> str:
     lower_user_message = user_message.lower()
     print(f'lowercased Message: {lower_user_message}')  # Add this line for debugging
-    rand_num_buy = 0
 
     if 'patus' in lower_user_message:
         return 'Утро вечера мудренее. (Rano ma więcej mądrości niż wieczór.)'
