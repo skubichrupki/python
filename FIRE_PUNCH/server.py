@@ -5,7 +5,7 @@ import socket
 
 # define server/machine localhost address
 # The host variable is set to '127.0.0.1', which is the standard IP address for localhost.
-host = '127.0.0.1'
+host = 'localhost'
 port = 55554
 
  # af_inet -> ipv4, sock_stream -> tcp

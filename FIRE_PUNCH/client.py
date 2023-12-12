@@ -9,7 +9,7 @@ import threading
 nickname = input('sys_cmd: choose a nickname: ')
 
 client = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 55554))
+client.connect(('localhost', 55554))
 
 
 def receive():
@@ -19,6 +19,7 @@ def receive():
             if message == 'NICK':
                 pass
             else:
+                # if string from beginning = my nickname dont show it (to do)
                 print(message)
         except:
             print('error')
@@ -27,7 +28,7 @@ def receive():
 
 def write():
     while True:
-        # prompt for message from client
+        # prompclst for message from client
         message = f'{nickname}: {input("")}'
         client.send(message.encode('ascii'))
 
