@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # specify data to set up server
-# host = input("set up server ip: ")
-# port = int(input("set up server port: "))
-host = os.getenv('HOST')
-port = int(os.getenv('PORT'))
+host = input("set up server ip: ")
+port = int(input("set up server port: "))
+# host = os.getenv('HOST')
+# port = int(os.getenv('PORT'))
 server_name = input("set up the server name: ")
 
  # af_inet = ipv4, sock_stream = tcp
@@ -32,7 +32,13 @@ def handle(client):
         # get message, broadcast it
         try:
             message = client.recv(1024)
-            broadcast(message)
+
+            # kick functionality
+            if message.startswith(b'KICK'):
+                print('kick request recvd on the server, but nobody was kicked out because dev is a lazy fuck')
+            else:
+                broadcast(message)
+
         # when client exit
         except:
             # remove client, close connection
@@ -43,7 +49,7 @@ def handle(client):
             # remove the nickname
             nickname = nicknames[index]
             nicknames.remove(nickname)
-            broadcast(f"sys_broadcast: {nickname} left the chat".encode('ascii'))
+            broadcast(f"{nickname} left the chat".encode('ascii'))
             break
 
 # handle client connection
@@ -51,14 +57,14 @@ def receive():
     while True:
         # accept clients all the time, when connected print message
         client, address = server.accept()
-        print(f"connected with client: {str(client)} on adress: {str(address)}")
+        print(f"connected with {str(address)}")
 
-        # send keyword nick, receive nickname, append nickname and client to lists
+        # send keyword getnickname, receive nickname, append nickname and client to lists
         client.send('getnickname'.encode('ascii'))
         nickname = client.recv(1024).decode('ascii')
         nicknames.append(nickname)
         clients.append(client)
-        client.send('success! '.encode('ascii'))
+        client.send(f'success, welcome to {server_name}, {nickname}'.encode('ascii'))
 
         print(f'clients on the server: {nicknames}')
         broadcast(f'{nickname} joined {server_name}'.encode('ascii'))
@@ -68,5 +74,5 @@ def receive():
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
 
-print(f'server {server_name} is listening on {host}:{port}..')
+print(f'server {server_name} is listening on {host}:{port} :]')
 receive()
