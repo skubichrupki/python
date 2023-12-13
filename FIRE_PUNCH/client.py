@@ -34,7 +34,7 @@ def receive():
 def write():
     while True:
         # prompt, send
-        message_input = input(f"{nickname} : ")
+        message_input = input("")
         message = f'{nickname} : {message_input}'
         
         # exit message
