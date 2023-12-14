@@ -11,7 +11,7 @@ client.connect((host, port))
 
 nickname = input('choose a nickname: ')
 admin_password = input('enter admin password, or just press enter: ')
-if admin_password == 'dupsko':
+if admin_password == '123':
     admin = True
     print('ADMIN RIGHTS UNLOCKED')
 else:
