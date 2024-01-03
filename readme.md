@@ -6,3 +6,9 @@ simple real-time chat app using python only
 
 **WEBSITE:**
 website using flask and SQL (wip)
+
+**PYGAME:**
+2d platformer using pygame (wip)
+
+**CTF:**
+capture the flag tasks from picoctf
