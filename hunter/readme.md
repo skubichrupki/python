@@ -17,3 +17,5 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 - install chrome driver for selenium<br>
 sudo apt-get install chromium-chromedriver<br>
 your chrome driver should be in '/usr/lib/chromium-browser/chromedriver'
+
+credits for idea to https://github.com/odziminski
