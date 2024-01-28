@@ -1,3 +1,6 @@
+**hunter**
+web scraper for job details on justjoin.it, credits for idea for https://github.com/odziminski
+
 **ALLSAFE**
 password generator
 
