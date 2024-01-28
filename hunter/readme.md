@@ -1,3 +1,6 @@
+## web scraper for justjoin.it ##
+lets see how it goes
+
 ### beautiful soup ###
 pip install bs4
 
