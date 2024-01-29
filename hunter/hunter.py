@@ -1,28 +1,30 @@
 import requests
 from bs4 import BeautifulSoup
-
-# name=location_filter_button
-# name=location_modal_Wrocław_button
-# name=location_modal_submit_button
+import time
 
 # requests - http library to access websites
 # uses get/post methods
 
-url = "https://justjoin.it/"
-response = requests.get(url)
+url = "https://justjoin.it/wroclaw/data/experience-level_junior"
+
 # status codes: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+response = requests.get(url)
 print(response.status_code)
+
+links = []
 
 if response.status_code == 200:
     # parse html of page with soup
     soup = BeautifulSoup(response.text, 'html.parser')
-    # scrap all the links
-    links = []
     for link in soup.find_all('a'):
-        #links.append(link.get('href'))
         print(link.get('href'))
-        
+        links.append(link.get('href'))
+else:
+    print('status code !200')
 
+# url count
+time.sleep(1)
+print(len(soup.find_all('a')))
 
 
 
