@@ -1,10 +1,13 @@
-**ALLSAFE**
+**hunter:**
+web scraper for job details on justjoin.it,<br> credits for idea to https://github.com/odziminski
+
+**ALLSAFE:**
 password generator
 
-**DISCORD_BOT**
+**DISCORD_BOT:**
 simple bot doing fun stuff in a discord server
 
-**FIRE_PUNCH**
+**FIRE_PUNCH:**
 simple real-time chat app using python only
 
 **WEBSITE:**
