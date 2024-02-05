@@ -1,9 +1,6 @@
 # import pandas
 import pyodbc
 from prettytable import PrettyTable
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # Define the connection string
 server = 'skubi_pecet\SQLEXPRESS'
@@ -20,7 +17,6 @@ cursor.execute(query)
 columns = [column[0] for column in cursor.description]
 rows = cursor.fetchall()
 table = PrettyTable(columns)
-
 
 for row in rows:
     table.add_row(row)
