@@ -1,5 +1,5 @@
-**hunter:**
-web scraper for job details on justjoin.it,<br> credits for idea to https://github.com/odziminski
+**BA:**
+Business Analysis stuff
 
 **ALLSAFE:**
 password generator
@@ -13,8 +13,8 @@ simple real-time chat app using python only
 **WEBSITE:**
 website using flask and SQL (wip)
 
-**PYGAME:**
-2d platformer using pygame (wip)
-
 **CTF:**
 capture the flag tasks from picoctf
+
+**hunter:**
+web scraping stuff (abandoned)
