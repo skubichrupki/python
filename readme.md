@@ -1,5 +1,3 @@
-**BA:**
-Business Analysis stuff
 
 **ALLSAFE:**
 password generator
@@ -15,6 +13,3 @@ website using flask and SQL (wip)
 
 **CTF:**
 capture the flag tasks from picoctf
-
-**hunter:**
-web scraping stuff (abandoned)
